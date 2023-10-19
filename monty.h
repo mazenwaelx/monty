@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdarg.h>
+
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -42,7 +44,7 @@ extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
 /*file operations*/
-void open_(char *file_name);
+void open_file(char *file_name);
 int parse_(char *buffer, int line_number, int format);
 void read_(FILE *);
 int len_(FILE *);

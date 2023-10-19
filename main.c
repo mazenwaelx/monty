@@ -1,6 +1,4 @@
 #include "monty.h"
-stack_t *head = NULL;
-
 /**
  * main - entry point
  * @argc: arguments count
@@ -15,7 +13,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	open_(argv[1]);
+	open_file(argv[1]);
 	free_();
 	return (0);
 }
@@ -43,6 +41,7 @@ stack_t *create_node(int n)
  */
 void free_(void)
 {
+	stack_t *head = NULL;
 	stack_t *tmp;
 
 	if (head == NULL)
@@ -64,6 +63,7 @@ void free_(void)
  */
 void add_to_q(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
+	stack_t *head = NULL;
 	stack_t *tmp;
 
 	if (new_node == NULL || *new_node == NULL)

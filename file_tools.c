@@ -130,6 +130,7 @@ void find_(char *opcode, char *value, int ln, int format)
  */
 void call_funss(op_func func, char *op, char *val, int ln, int format)
 {
+	stack_t *head = NULL;
 	stack_t *node;
 	int flag;
 	int i;
